@@ -1,0 +1,18 @@
+@mixin box-size() {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@mixin none-scrollbar() {
+  *::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin link-edit() {
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
