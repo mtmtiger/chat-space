@@ -16,3 +16,16 @@
     text-decoration: none;
   }
 }
+
+.notification {
+  .notice {
+    background-color: $blue-color;
+    color: $white;
+    text-align: center;
+  }
+  .alert {
+    background-color: $orange-color;
+    color: $white;
+    text-align: center;
+  }
+}
