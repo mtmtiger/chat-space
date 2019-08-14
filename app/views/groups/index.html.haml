@@ -14,26 +14,3 @@
               = fa_icon 'cog', class: "icon"
     .groups
       = render "groups/group"
-  .chat-main
-    .main-header
-      .main-header__left-box
-        %h2.main-header__left-box__current-group
-          test_1
-        %ul.main-header__left-box__member-list
-          Member：
-          %li.main-header__left-box__member-list__member<
-            test_s
-      =link_to "/groups/1/edit" do
-        .main-header__edit-btn<
-          Edit
-    .messages
-      .message
-        = render "groups/message"
-    .form
-      %form.new-message#new_message
-        .input-box
-          %input.input-box__text{placeholder: "type a message"}
-          %label.input-box__image
-            = fa_icon 'image'
-            %input.input-box__image__file{type: "file"}
-        %input.submit-btn{type: "submit", value: "Send"}
