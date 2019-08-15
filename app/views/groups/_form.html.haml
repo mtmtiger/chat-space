@@ -8,10 +8,8 @@
   .chat-group-form__field
     .chat-group-form__field--left
       = f.label :name, class: 'chat-group-form__label'
-      -# %label.chat-group-form__label{for: "chat_group_name"} グループ名
     .chat-group-form__field--right
       = f.text_field :name, class: 'chat__group_name chat-group-form__input', placeholder: 'グループ名を入力してください'
-      -# %input#chat_group_name.chat-group-form__input{name: "chat_group[name]", placeholder: "グループ名を入力してください", type: "text"}/
   .chat-group-form__field.clearfix
     / この部分はインクリメンタルサーチ(ユーザー追加の非同期化)のときに使用します
   .chat-group-form__field.clearfix
@@ -25,4 +23,3 @@
     .chat-group-form__field--left
     .chat-group-form__field--right
       = f.submit class: 'chat-group-form__action-btn'
-      -# %input.chat-group-form__action-btn{"data-disable-with": "Save", name: "commit", type: "submit", value: "Save"}/
