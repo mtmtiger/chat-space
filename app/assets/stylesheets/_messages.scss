@@ -75,6 +75,9 @@
         display: flex;
         font-size: 12px;
         color: #999999;
+      li+li {
+        margin-left: 0.3rem;
+      }
       }
     }
     &__edit-btn {
@@ -122,7 +125,6 @@
         display: flex;
         .input-box {
           position: relative;
-          width: 100%;
           &__text {
             height: 50px;
             width: 100%;

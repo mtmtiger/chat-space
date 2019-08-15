@@ -1,0 +1,26 @@
+.flash-box
+.wrapper
+  = render "groups/chat-side"
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group
+          = @group.name
+        %ul.main-header__left-box__member-list
+          Member：
+          - @group.users.each do |user|
+            %li.main-header__left-box__member-list__member<
+              = user.name
+      =link_to "/groups/1/edit" do
+        .main-header__edit-btn<
+          Edit
+    .messages
+      = render partial: 'message', collection: @messages
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :text, class: 'input-box__text', id: 'input-box__text', placeholder: 'type a message'
+        .input-box
+          = f.label :image, class: 'input-box__image' do
+            = fa_icon 'image'
+            = f.file_field :image, class: 'input-box__image__file'
+        = f.submit 'Send', class: 'submit-btn'
