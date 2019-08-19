@@ -31,8 +31,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('#input-box__text').val('');
-      $('input[type=file]').val('');
+      $('#new_message')[0].reset();
       $('.submit-btn').prop('disabled', false);
       scroll();
     })
