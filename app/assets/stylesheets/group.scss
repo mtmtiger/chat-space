@@ -78,6 +78,13 @@ ul {
       width: 70%;
     }
   }
+  &__search {
+    &::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
 }
 
 .chat-group-user {
