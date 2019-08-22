@@ -34,7 +34,7 @@ $(function(){
         scroll();
       })
       .fail(function() {
-        console.log('自動更新に失敗しました');
+        alert('自動更新に失敗しました');
       });
     }
   };
